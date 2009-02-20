@@ -44,15 +44,16 @@ sub import
 {
   my $class = shift;
 
-  if (@_) {
+  foreach my $args (@_) {
   {
-    my $args = shift;
-    if (defined $args && $args eq '$'.'uuid')
-    {
-      my $uuid;
-      tie $uuid, $class;
-      no strict 'refs';   # about to export symbols
-      *{ caller() . "::uuid" } = \$uuid;
+    unless (defined $args && $args eq '$'.'uuid') {
+      die qq{"$args" is not exported by the }.__PACKAGE__.qq{ module\n}
+    }
+    
+    my $uuid;
+    tie $uuid, $class;
+    no strict 'refs';   # about to export symbols
+    *{ caller() . "::uuid" } = \$uuid;
     }
   }
 
