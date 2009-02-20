@@ -2,5 +2,5 @@
 use Test::More tests => 1;
 
 BEGIN {
-  use_ok('BabelClient::Simple');
+  use_ok('Tie::DataUUID');
 }
