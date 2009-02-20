@@ -2,7 +2,6 @@
 ############ STANDARD Pod::Coverage TEST - DO NOT EDIT ##################
 use Test::More;
 use strict;
-use warnings;
 unless ($ENV{POD_TESTS} || $ENV{PERL_AUTHOR} || $ENV{THIS_IS_MARKF_YOU_BETCHA}) {
     Test::More::plan(
         skip_all => "Test::Pod::Coverage tests not enabled (set POD_TESTS or PERL_AUTHOR env var)"

@@ -1,7 +1,6 @@
 #!perl
 ############## STANDARD Test::Pod TEST - DO NOT EDIT ####################
 use strict;
-use warnings;
 use Test::More;
 unless ($ENV{POD_TESTS} || $ENV{PERL_AUTHOR} || $ENV{THIS_IS_MARKF_YOU_BETCHA}) {
     Test::More::plan(
