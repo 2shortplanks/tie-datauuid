@@ -1,13 +1,11 @@
 package Tie::DataUUID;
+use Tie::Scalar;
+use base qw(Tie::StdScalar);
 
 use strict;
-use vars qw($VERSION $uuid @ISA);
-#use warnings;
+use warnings;
 
-$VERSION = "1.00";
-
-use Tie::Scalar;
-@ISA = qw(Tie::StdScalar);
+our $VERSION = "1.01";
 
 use Data::UUID;
 
@@ -45,24 +43,31 @@ my $datauuid = Data::UUID->new();
 sub import
 {
   my $class = shift;
-  my $args = shift;
 
-  if (defined $args && $args eq '$uuid')
+  if (@_) {
   {
-    my $uuid;
-    tie $uuid, $class;
-    no strict 'refs';   # about to export symbols
-    *{ caller() . "::uuid" } = \$uuid;
+    my $args = shift;
+    if (defined $args && $args eq '$'.'uuid')
+    {
+      my $uuid;
+      tie $uuid, $class;
+      no strict 'refs';   # about to export symbols
+      *{ caller() . "::uuid" } = \$uuid;
+    }
   }
+
+  return
 }
 
-sub FETCH { $datauuid->create_str }
+sub FETCH { return $datauuid->create_str }
 
 =head1 AUTHOR
 
 Written by Mark Fowler E<lt>mark@twoshortplanks.comE<gt>
 
 Copyright Fotango 2004.  All Rights Reserved.
+
+Copyright Mark Fowler 2009.  All Rights Reserved.
 
 This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
@@ -71,8 +76,9 @@ and/or modify it under the same terms as Perl itself.
 
 None known.
 
-Bugs should be reported to me via the CPAN RT system.
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Tie::DataUUID>.
+Please see http://twoshortplanks.com/dev/tiedatauuid for
+details of how to submit bugs, access the source control for
+this project, and contact the author.
 
 =head1 SEE ALSO
 
