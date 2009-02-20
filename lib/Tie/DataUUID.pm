@@ -1,11 +1,12 @@
 package Tie::DataUUID;
-use Tie::Scalar;
-use base qw(Tie::StdScalar);
 
 use strict;
-use warnings;
+use vars qw($VERSION @ISA);
 
-our $VERSION = "1.01";
+use Tie::Scalar;
+@ISA = qw(Tie::StdScalar);
+
+$VERSION = "1.01";
 
 use Data::UUID;
 
