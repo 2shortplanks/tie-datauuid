@@ -3,3 +3,4 @@ inc
 META.yml
 Makefile
 pm_to_blib
+MANIFEST.bak

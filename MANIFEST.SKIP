@@ -1,4 +1,6 @@
 CVS/.*
+\.git/.*
+\.gitignore$
 \.svn/.*
 \.cvsignore$
 \.Inline/.*
