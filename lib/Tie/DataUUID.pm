@@ -69,18 +69,20 @@ Written by Mark Fowler E<lt>mark@twoshortplanks.comE<gt>
 
 Copyright Fotango 2004.  All Rights Reserved.
 
-Copyright Mark Fowler 2009.  All Rights Reserved.
+Copyright Mark Fowler 2009, 2013.  All Rights Reserved.
 
 This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
 =head1 BUGS
 
-None known.
+Bugs (or feature requests) should be reported via this distribution's
+CPAN RT queue.  This can be found at
+L<https://rt.cpan.org//Dist/Display.html?Queue=Tie-DataUUID>
 
-Please see http://twoshortplanks.com/dev/tiedatauuid for
-details of how to submit bugs, access the source control for
-this project, and contact the author.
+You can also address issues by forking this distribution
+on github and sending pull requests.  It can be found at
+L<http://github.com/2shortplanks/Tie-DataUUID>
 
 =head1 SEE ALSO
 
