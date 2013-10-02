@@ -6,7 +6,7 @@ use vars qw($VERSION @ISA);
 use Tie::Scalar;
 @ISA = qw(Tie::StdScalar);
 
-$VERSION = "1.01";
+$VERSION = "1.02";
 
 use Data::UUID;
 
