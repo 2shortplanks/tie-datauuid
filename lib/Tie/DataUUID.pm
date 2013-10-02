@@ -50,7 +50,7 @@ sub import
     unless (defined $args && $args eq '$'.'uuid') {
       die qq{"$args" is not exported by the }.__PACKAGE__.qq{ module\n}
     }
-    
+
     my $uuid;
     tie $uuid, $class;
     no strict 'refs';   # about to export symbols
